@@ -1,14 +1,16 @@
 # Project Name
 
-set up the webpack
+the Leaderoard
+
+# Description
+
+this project is used to save the scores of players in a game
 
 ## Built With
 
 - Major languages
 - Frameworks
 - Technologies used
-
-To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
