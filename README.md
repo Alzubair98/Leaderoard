@@ -1,6 +1,6 @@
 # Project Name
 
-the Leaderoard
+The Leaderoard
 
 # Description
 
