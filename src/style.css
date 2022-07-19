@@ -1,0 +1,51 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0%;
+  border-style: solid;
+  border-width: 1px;
+  width: 70%;
+}
+
+li {
+  padding-left: 4px;
+}
+
+.button-continer {
+  display: flex;
+  gap: 15px;
+}
+
+.refres-button {
+  height: 50%;
+  margin-top: 7%;
+}
+
+.second-continer {
+  padding-left: 25%;
+  padding-top: 10%;
+  display: flex;
+  gap: 40px;
+}
+
+/* the list continer */
+
+.list-continer {
+  width: 25%;
+  padding-left: 5px;
+}
+
+.scores-list li:nth-child(even) {
+  background-color: beige;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.submit-button {
+  width: 32%;
+  margin-left: 68%;
+}
