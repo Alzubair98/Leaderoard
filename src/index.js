@@ -4,15 +4,17 @@ const form = document.querySelector('.form');
 const name = document.querySelector('.name_input');
 const score = document.querySelector('.score_input');
 
-const setEndPoint = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/epd1eVyK5Nyiug7lZWsg/scores/';
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/epd1eVyK5Nyiug7lZWsg/scores/';
 
 const addScore = () => {
-  fetch(setEndPoint, {
+  const nameV = name.value;
+  const scoreV = score.value;
+  fetch(url, {
     method: 'POST',
     headers: { 'Content-type': 'application/json; charset=UTF-8' },
     body: JSON.stringify({
-      user: name.value,
-      score: score.value,
+      user: nameV,
+      score: scoreV,
     }),
   });
 };
@@ -20,7 +22,7 @@ const addScore = () => {
 const List = document.querySelector('.scores-list');
 
 const getScore = () => {
-  fetch(setEndPoint).then(async (res) => {
+  fetch(url).then(async (res) => {
     const data = await res.json();
     const arrayOfResults = data.result;
     return arrayOfResults;
