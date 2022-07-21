@@ -22,9 +22,9 @@ const addScore = () => {
 };
 
 const buildHTML = (itemdescription) => {
-  itemdescription.forEach((element) => {
+  itemdescription.forEach((element, index) => {
     const item = document.createElement('li');
-    item.textContent = `${element.user}:${element.score}`;
+    item.textContent = `${index + 1}:-${element.user}:${element.score}`;
     List.appendChild(item);
   });
 };
@@ -56,6 +56,5 @@ refreshButton.addEventListener('click', () => {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   addScore();
-  name.value = '';
-  score.value = '';
+  form.reset();
 });
