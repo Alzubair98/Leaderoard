@@ -24,7 +24,7 @@ const addScore = () => {
 const buildHTML = (itemdescription) => {
   itemdescription.forEach((element, index) => {
     const item = document.createElement('li');
-    item.textContent = `${index + 1}:-${element.user}:${element.score}`;
+    item.textContent = `${index + 1}:- ${element.user}:${element.score}`;
     List.appendChild(item);
   });
 };
