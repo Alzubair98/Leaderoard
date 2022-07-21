@@ -3,6 +3,8 @@ import './style.css';
 const form = document.querySelector('.form');
 const name = document.querySelector('.name_input');
 const score = document.querySelector('.score_input');
+const List = document.querySelector('.scores-list');
+const refreshButton = document.querySelector('.refresh-button');
 
 const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/epd1eVyK5Nyiug7lZWsg/scores/';
 
@@ -19,7 +21,13 @@ const addScore = () => {
   });
 };
 
-const List = document.querySelector('.scores-list');
+const buildHTML = (itemdescription) => {
+  itemdescription.forEach((element) => {
+    const item = document.createElement('li');
+    item.textContent = `${element.user}:${element.score}`;
+    List.appendChild(item);
+  });
+};
 
 const getScore = () => {
   fetch(url).then(async (res) => {
@@ -28,17 +36,17 @@ const getScore = () => {
     return arrayOfResults;
   })
     .then((arrayOfResults) => {
-      for (let i = 0; i < arrayOfResults.length; i += 1) {
-        const newscore = document.createElement('li');
-        newscore.textContent = `${arrayOfResults[i].user} : ${arrayOfResults[i].score}`;
-        List.appendChild(newscore);
-      }
+      buildHTML(arrayOfResults);
+      // another way of creating elements
+      // for (let i = 0; i < arrayOfResults.length; i += 1) {
+      //   const newscore = document.createElement('li');
+      //   newscore.textContent = arrayOfResults[i].user + ":" + arrayOfResults[i].score;
+      //   List.appendChild(newscore);
+      // }
     });
 };
 
 getScore();
-
-const refreshButton = document.querySelector('.refresh-button');
 
 refreshButton.addEventListener('click', () => {
   List.innerHTML = '';
