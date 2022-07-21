@@ -1,10 +1,19 @@
+html {
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(120deg, #A683E3 50%, #E4E9FD 50%);
+  min-height: 100%;
+  font-family: 'helvetica neue';
+}
+
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0%;
   border-style: solid;
   border-width: 1px;
-  width: 70%;
+  width: 100%;
+  border-radius: 10px;
 }
 
 li {
@@ -13,13 +22,27 @@ li {
 
 .button-continer {
   display: flex;
-  gap: 15px;
 }
 
 .refresh-button {
-  height: 50%;
-  margin-top: 7%;
+  height: 2.5rem;
+  width: 5rem;
+  height: 2.5rem;
+  padding: 0.2rem;
+  border-radius: 0.275rem;
+  background: #E4E9FD;
+  color: #A683E3;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  margin-left: 30%;
+  margin-top: 3%;
+
 }
+
+.refresh-button:active{
+  transform: translateY(0.3rem);
+}
+
 
 .second-continer {
   padding-left: 25%;
@@ -36,7 +59,7 @@ li {
 }
 
 .scores-list li:nth-child(even) {
-  background-color: beige;
+  background-color: #A683E3;
 }
 
 .form {
@@ -46,6 +69,31 @@ li {
 }
 
 .submit-button {
-  width: 32%;
-  margin-left: 68%;
+  width: 35%;
+  margin-left: 65%;
+  height: 2.5rem;
+  padding: 0.2rem;
+  border-radius: 0.275rem;
+  background: #A683E3;
+  color: #ffff;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.submit-button:active{
+  transform: translateY(0.3rem);
+}
+
+/* input bars */
+.name_input{
+  width: 16rem;
+  border-radius: 60px;
+  height: 2rem;
+  padding-left: 10px;
+}
+
+.score_input{
+  border-radius: 60px;
+  height: 2rem;
+  padding-left: 10px;
 }
