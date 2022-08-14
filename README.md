@@ -12,6 +12,10 @@ this project is used to save the scores of players in a game
 - Frameworks
 - Technologies used
 
+## Live Demo (if available)
+
+[Live Demo Link](https://alzubair98.github.io/Leaderoard/dist/)
+
 ## Authors
 
 👤 **Alzubair**
